@@ -1,0 +1,555 @@
+/* template*/
+header{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+font-size: 14px;
+line-height: 1.43;
+color: #484848;
+padding-top:1rem;
+}
+body
+{
+
+background-image: url("https://a0.muscache.com/4ea/air/r:w3100-h2074-sfit,e:fjpg-c80/pictures/0ffd8594-f123-43f0-85bb-7ef88c6f0624.jpg");
+background-repeat:no-repeat;
+background-size: cover;
+}
+svg{
+    height: 1em;
+width: 1em;
+display:inline-block;
+color:white;    
+}
+#logo{
+    display: inline-block   ;
+vertical-align: middle   ;
+font-size: 34px   ;
+transition: color 0.25s ease 0s   ;
+color: rgb(255, 255, 255)   ;
+padding-left:1rem;
+}
+#head1
+{
+    display: grid;
+    grid-template-columns: 9.8fr .2fr;
+}
+.nav
+{
+    display: inline-block   ;
+    padding: 1rem   ;
+    vertical-align: middle   ;
+line-height: 3   ;
+border-bottom: 2px solid transparent   ;
+color:white;
+font-size: inherit;
+font-family: inherit;
+}
+#box1
+{
+    height: 100%   ;
+vertical-align: middle   ;
+box-sizing: border-box   ;
+border-bottom: 2px solid transparent   ;
+width:9.5rem;
+}
+#box2
+{
+    height: 100%   ;
+vertical-align: middle   ;
+box-sizing: border-box   ;
+border-bottom: 2px solid transparent   ;
+width:10rem;
+}
+#box3
+{
+    height: 100%   ;
+vertical-align: middle   ;
+box-sizing: border-box   ;
+border-bottom: 2px solid transparent   ;
+width:5rem;
+}
+
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+  padding: 0;
+}
+.nav:hover{
+    border-bottom: .1rem solid white  ;  
+}
+#nav_grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.footer1{
+    margin: 0px   ;
+overflow-wrap: break-word   ;
+font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+font-size: 14px   ;
+font-weight: 800   ;
+line-height: 1.28571em   ;
+color: rgb(72, 72, 72)   ;
+}
+a{
+    text-decoration:none;
+}
+footer{
+    padding-top:8rem;
+}
+footer a{
+    color:white;
+}
+#footer_grid
+{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-column-gap: 8rem;
+}
+.footer_media
+{
+    display: inline-block   ;
+padding-left: 8px   ;
+padding-right: 8px   ;
+vertical-align: middle   ;
+
+}
+footer svg{
+    height: 18px;
+width: 18px;
+display: inline-block;
+fill:blue;
+}
+.footer_link
+{
+    cursor: pointer   ;
+background-color: transparent   ;
+color: blue   ;
+border: 0px none   ;
+display: inline  ;
+padding: 0px; margin: 0px;
+}
+#footer_logo
+{
+    padding-left: 5rem;
+    padding-top:3rem;
+}
+#footer_list_logos
+{
+    display: inline-block   ;
+margin-left: -5px   ;
+white-space: nowrap   ;
+vertical-align: middle   ;
+}
+#footer_terms
+{
+    margin-bottom: 4px   ;
+margin-top: 16px   ;
+}
+.footer_privacy
+{
+    margin-bottom: 4px   ;
+    color:white;
+}
+#footer_main
+{
+    padding: 15px   ;
+    max-width: 1080px   ;
+    margin: 0px auto   ;
+position: relative   ;
+background-color:transparent;
+}
+#footer_bottom
+{
+    margin: 0px   ;
+overflow-wrap: break-word   ;
+font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+font-size: 14px   ;
+font-weight: 600   ;
+line-height: 1.28571em   ;
+color: rgb(118, 118, 118)   ;
+padding-left:0.1rem;
+}
+#footer_bottom2
+{
+    display: inline-flex;
+    padding:0;
+}
+#footer_bottom3
+{
+    display: grid;
+    grid-template-columns:.1fr 9.9fr;
+    padding:0;
+}
+#footer_svg_bottom
+{
+    padding-left:2rem;
+}
+
+
+/*home page*/
+
+#home
+{
+    margin: 0px auto   ;
+position: relative   ;
+max-width: 1760px   ;
+padding-right: 80px   ;
+padding-left: 0px   ;
+}
+#home1
+{
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%   ;
+    border-radius: 4px   ;
+    padding: 32px 32px 24px   ;
+    width: 441px   ;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 16px 40px   ;
+}
+.home2
+{
+    font-size: 1rem   ;
+line-height: 36px   ;
+letter-spacing: normal   ;
+font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+color: rgb(72, 72, 72)   ;
+margin: 0px   ;
+padding: 0px   ;
+}
+.home_labels
+{
+    margin: 0px   ;
+overflow-wrap: break-word   ;
+font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+font-size: 12px   ;
+font-weight: 800   ;
+line-height: 1.33333em   ;
+letter-spacing: 0.0833333em   ;
+color: rgb(72, 72, 72)   ;
+padding-bottom: 1rem;
+}
+.home_whereIP
+{
+    -moz-box-align: center   ;
+    padding-left: 12px   ;
+    padding-right: 12px   ;
+    position: relative   ;
+    align-items: center   ;
+    background-color: rgb(255, 255, 255)   ;
+    display: flex   ;
+    height: 48px   ;
+    width: 100%   ;
+    border:1px solid sliver;
+
+    font-size: 17px   ;
+background-color: transparent   ;
+margin: 0px   ;
+padding: 0px   ;
+width: 100%   ;
+text-overflow: ellipsis   ;
+}
+
+.home_date
+{
+    font-size: var(--font-form-element-font-size, 17px)   ;
+line-height: var(--font-form-element-line-height, 24px)   ;
+letter-spacing: var(--font-form-element-letter-spacing, normal)   ;
+
+text-transform: var(--font-form-element-text-transform, undefined)   ;
+color: var(--font-form-element-color, #484848)   ;
+padding-top: var(--spacing-form-element-vertical, 11px)   ;
+padding-bottom: var(--spacing-form-element-vertical, 11px)   ;
+font-weight: var(--font-light-font-weight, normal)   ;
+background-color: var(--color-clear, transparent)   ;
+padding-left: var(--spacing-form-element-horizontal, 0px)   ;
+padding-right: var(--spacing-form-element-horizontal, 11px)   ;
+border:0px none;
+}
+#home_grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2rem;
+}
+#home_guest
+{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%   ;
+position: relative   ;
+text-align: left   ;
+border: 1px solid rgb(235, 235, 235)   ;
+border-radius: 3px   ;
+padding: 8px 11px 11px   ;
+font-size: 16px   ;
+font-weight: 400   ;
+line-height: normal   ;
+display: block   ;
+width: 100%   ;
+height: 48px   ;
+color: rgb(118, 118, 118)   ;
+}
+#home_svg
+{
+    position: absolute   ;
+right: 11px   ;
+top: 0px   ;
+bottom: 0px   ;
+margin: auto   ;
+pointer-events: none   ;
+display: block   ;
+height: 12px   ;
+width: 12px   ;
+}
+#home1{
+color:white;
+}
+#home_promo
+{
+    font-size: 2rem;
+    height:15rem;
+    margin-top:1rem;
+    text-align: center;
+    padding-top: 5rem;
+    
+}
+#home_promo2
+{
+    background-image: url(promo.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 10rem;
+    margin-top: 3rem;
+}
+.home_promo3
+{
+    font-size: 32px;
+font-weight: normal;
+color:white;
+text-align: center;
+}
+#home_invitebox
+{
+    background-color: white;
+    width:8rem;
+    height: 3rem;
+    text-align: center;
+    margin-left:40rem;
+    margin-top:1rem;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;  
+}
+#home_aboutus{
+    
+    width:auto;
+    background-image: url(/aboutus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    width:80%;
+    height: 19.55rem;
+}
+#home_aboutus_grid
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding-top: 1rem;
+    
+}
+#home_aboutus_label
+{
+    font-size: 32px;
+    line-height: 1.375;
+    font-weight: 600;
+    color:white;
+    padding-left: 1rem;
+}
+
+#home_aboutus_p
+{
+    font-size: 1rem;
+    line-height: 1.66667;
+    text-rendering: optimizeLegibility;
+    color:white;
+    font-family: Cereal,sans-serif;
+    padding-left: 1rem;
+}
+/* room */
+
+#room_main
+{
+    background-color: white;
+}
+#room_h2
+{
+    font-size: 2.5rem;
+    color: #363636;
+    font-family: "Josefin Sans", sans-serif;
+font-weight: 600;
+line-height: 1.125;
+text-align: center;
+}
+.room_grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    grid-column-gap: 1rem;
+}
+.room_des1
+{
+    color: rgb(34, 34, 34)   ;
+font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+font-weight: 400   ;
+font-size: 18px   ;
+line-height: 24px   ;
+max-height: 24px   ;
+overflow: hidden   ;
+text-overflow: ellipsis   ;
+display: -webkit-box   ;
+-webkit-line-clamp: 1   ;
+-moz-box-orient: vertical   ;
+margin-top:12px;
+}
+.room_des2
+{
+    color: rgb(34, 34, 34)   ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+    font-weight: 400   ;
+    font-size: 18px   ;
+    line-height: 24px   ;
+    max-height: 24px   ;
+    overflow: hidden   ;
+    text-overflow: ellipsis   ;
+    display: -webkit-box   ;
+    -webkit-line-clamp: 1   ;
+    -moz-box-orient: vertical   ;
+}
+.room_des3
+{
+    -moz-box-align: center   ;
+    align-items: center   ;
+    color: rgb(34, 34, 34)   ;
+    display: flex   ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+    font-weight: 400   ;
+    font-size: 18px   ;
+    line-height: 24px   ;
+    margin-top:12px;
+}
+.room_img_box
+{
+    padding: .75rem;
+    border:1px solid grey;
+}
+.room_img_boxinner
+{
+    border-radius: 6px;
+display: block;
+padding: 1.25rem;
+}
+
+.room_img
+{
+    height: auto;
+    width:100%;
+    display: block;
+}
+.room_price
+{
+    font-weight:bold;
+}
+/* sign up */
+
+#signup_grid
+{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+}
+.signup_box1
+{
+    display: hidden;
+}
+#signup_box2
+{
+    background-color: white;
+}
+#signup_or
+{
+    padding-top:.5rem;
+    padding-bottom: .5rem;
+    color:black;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+}
+.signup_label
+{
+    margin: 0px  ;
+    overflow-wrap: break-word   ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+    font-size: 1rem   ;
+    font-weight: 800   ;
+    line-height: 1.33333em   ;
+    letter-spacing: 0.0833333em   ;
+    color: rgb(72, 72, 72)   ;
+    padding-left:.5rem;
+}
+.signup_input
+{
+    -moz-box-align: center   ;
+    position: relative   ;
+    align-items: center   ;
+    background-color: rgb(255, 255, 255)   ;
+    display: flex   ;
+    height: 30px   ;
+    font-size: 20px   ;
+border: 1px solid sliver;
+border-radius: 5px;
+margin: 0px   ;
+padding: 0px   ;
+width: 100%   ;
+text-overflow: ellipsis   ;
+}
+.signup_input2
+{
+    padding: 1rem .5rem 2rem .5rem;
+}
+#signup_submit
+{
+    background-color: rgb(151, 101, 103);
+border-color: transparent;
+color: #fff;
+justify-content: center;
+padding-bottom: calc(.375em - 1px);
+padding-left: .5em;
+padding-right: .75em;
+padding-top: calc(.375em - 1px);
+text-align: center;
+white-space: nowrap;
+font-size:2rem;
+}
+#signup_submit_box
+{
+    display: flex;
+ justify-content: flex-end;
+}
+#signup_link
+{
+    text-decoration: none;
+}
+#signup_option
+{
+border-color: transparent;
+color: black;
+justify-content: center;
+padding-bottom: calc(.375em - 1px);
+padding-left: .5em;
+padding-right: .75em;
+padding-top: 2rem;
+text-align: center;
+white-space: nowrap;
+    font-size:2rem;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif 
+}
+/*all*/
