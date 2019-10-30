@@ -12,7 +12,7 @@
      or 
     </div>
 <div>
-<form method="POST">
+<form method="POST" action="/sign">
 <label class="signup_label">First Name</label>
 <div  class="signup_input2">
     <input class="signup_input" type="text" name=firstname placeholder="First Name">
@@ -31,7 +31,12 @@
 </div>
 <label class="signup_label">Birthday</label>
 <div  class="signup_input2">
-    <input class="signup_input" type="date" name=Birthday placeholder="Birthday">
+    <input class="signup_input" type="date" name=birthday placeholder="Birthday">
+</div>
+<div class="login_error">
+     {{#each message}}
+        <p>{{this}}</p>
+        {{/each}}
 </div>
  <div id="signup_submit_box">
      <input  id="signup_submit"type="submit" value="Sign up">

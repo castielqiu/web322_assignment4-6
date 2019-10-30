@@ -59,7 +59,7 @@ box-sizing: border-box   ;
 border-bottom: 2px solid transparent   ;
 width:10rem;
 }
-#box3
+.box3
 {
     height: 100%   ;
 vertical-align: middle   ;
@@ -310,6 +310,7 @@ color:white;
     text-align: center;
     padding-top: 5rem;
     
+    
 }
 #home_promo2
 {
@@ -318,6 +319,8 @@ color:white;
     z-index: -1;
     height: 10rem;
     margin-top: 3rem;
+    background-size: cover;
+    opacity: 0.6;
 }
 .home_promo3
 {
@@ -345,8 +348,8 @@ text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.6;
-    width:80%;
     height: 19.55rem;
+    background-size: cover;
 }
 #home_aboutus_grid
 {
@@ -552,4 +555,52 @@ white-space: nowrap;
     font-size:2rem;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif 
 }
-/*all*/
+/*login page*/
+
+#login_maingrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#login_form
+{
+    background-color: white;
+    border: 1px solid sliver;
+    border-radius: 5px;
+}
+.login_input
+{
+    width:31rem;
+    padding:1rem;
+    height:5rem;
+    margin:1rem;
+}
+.login_forgot
+{
+    text-decoration: none;
+    color:black;
+    padding-left: 1rem;
+}
+#login_submit
+{
+    border-color: #ff5a5f;
+    background-color: #ff5a5f;
+    color: #fff;
+    padding:20px 27px 20px 27px;
+    text-align: center;
+    margin:2rem;
+    width:30rem;
+}
+#login_signup
+{
+    display: inline;
+    margin-right: 4px;
+    line-height: 34px;
+    font-size: 16px;
+    padding-left:18rem;
+}
+.login_error
+{
+    color:red;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+}
