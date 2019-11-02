@@ -1,7 +1,7 @@
 /* template*/
 header{
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-font-size: 14px;
+font-size: .875rem;
 line-height: 1.43;
 color: #484848;
 padding-top:1rem;
@@ -22,7 +22,7 @@ color:white;
 #logo{
     display: inline-block   ;
 vertical-align: middle   ;
-font-size: 34px   ;
+font-size: 2.215rem   ;
 transition: color 0.25s ease 0s   ;
 color: rgb(255, 255, 255)   ;
 padding-left:1rem;
@@ -38,7 +38,7 @@ padding-left:1rem;
     padding: 1rem   ;
     vertical-align: middle   ;
 line-height: 3   ;
-border-bottom: 2px solid transparent   ;
+border-bottom: .125rem solid transparent   ;
 color:white;
 font-size: inherit;
 font-family: inherit;
@@ -48,7 +48,7 @@ font-family: inherit;
     height: 100%   ;
 vertical-align: middle   ;
 box-sizing: border-box   ;
-border-bottom: 2px solid transparent   ;
+border-bottom: .125rem solid transparent   ;
 width:9.5rem;
 }
 #box2
@@ -56,7 +56,7 @@ width:9.5rem;
     height: 100%   ;
 vertical-align: middle   ;
 box-sizing: border-box   ;
-border-bottom: 2px solid transparent   ;
+border-bottom: .125rem solid transparent   ;
 width:10rem;
 }
 .box3
@@ -64,7 +64,7 @@ width:10rem;
     height: 100%   ;
 vertical-align: middle   ;
 box-sizing: border-box   ;
-border-bottom: 2px solid transparent   ;
+border-bottom: .125rem solid transparent   ;
 width:5rem;
 }
 
@@ -84,10 +84,10 @@ ul
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .footer1{
-    margin: 0px   ;
+    margin: 0rem   ;
 overflow-wrap: break-word   ;
 font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
-font-size: 14px   ;
+font-size: .875rem   ;
 font-weight: 800   ;
 line-height: 1.28571em   ;
 color: rgb(72, 72, 72)   ;
@@ -110,14 +110,14 @@ footer a{
 .footer_media
 {
     display: inline-block   ;
-padding-left: 8px   ;
-padding-right: 8px   ;
+padding-left: .5rem   ;
+padding-right: .5rem   ;
 vertical-align: middle   ;
 
 }
 footer svg{
-    height: 18px;
-width: 18px;
+    height: 1.125rem;
+width: 1.125rem;
 display: inline-block;
 fill:blue;
 }
@@ -126,9 +126,9 @@ fill:blue;
     cursor: pointer   ;
 background-color: transparent   ;
 color: blue   ;
-border: 0px none   ;
+border: 0rem none   ;
 display: inline  ;
-padding: 0px; margin: 0px;
+padding: 0rem; margin: 0rem;
 }
 #footer_logo
 {
@@ -138,34 +138,34 @@ padding: 0px; margin: 0px;
 #footer_list_logos
 {
     display: inline-block   ;
-margin-left: -5px   ;
+margin-left: -.3125rem   ;
 white-space: nowrap   ;
 vertical-align: middle   ;
 }
 #footer_terms
 {
-    margin-bottom: 4px   ;
-margin-top: 16px   ;
+    margin-bottom: .25rem   ;
+margin-top: 1rem   ;
 }
 .footer_privacy
 {
-    margin-bottom: 4px   ;
+    margin-bottom: .25rem   ;
     color:white;
 }
 #footer_main
 {
-    padding: 15px   ;
-    max-width: 1080px   ;
-    margin: 0px auto   ;
+    padding: .9375rem   ;
+    max-width: 67.5rem   ;
+    margin: 0rem auto   ;
 position: relative   ;
 background-color:transparent;
 }
 #footer_bottom
 {
-    margin: 0px   ;
+    margin: 0rem   ;
 overflow-wrap: break-word   ;
 font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
-font-size: 14px   ;
+font-size: .875rem   ;
 font-weight: 600   ;
 line-height: 1.28571em   ;
 color: rgb(118, 118, 118)   ;
@@ -192,36 +192,36 @@ padding-left:0.1rem;
 
 #home
 {
-    margin: 0px auto   ;
+    margin: 0rem auto   ;
 position: relative   ;
-max-width: 1760px   ;
-padding-right: 80px   ;
-padding-left: 0px   ;
+max-width: 110rem   ;
+padding-right: 5rem   ;
+padding-left: 0rem   ;
 }
 #home1
 {
     background: rgb(255, 255, 255) none repeat scroll 0% 0%   ;
-    border-radius: 4px   ;
-    padding: 32px 32px 24px   ;
-    width: 441px   ;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 16px 40px   ;
+    border-radius: .25rem   ;
+    padding: 2rem 2rem 1.5rem   ;
+    width: 27.5625rem   ;
+    box-shadow: rgba(0, 0, 0, 0.12) 0rem 1rem 2.5rem   ;
 }
 .home2
 {
     font-size: 1rem   ;
-line-height: 36px   ;
+line-height: 2.25rem   ;
 letter-spacing: normal   ;
 font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
 color: rgb(72, 72, 72)   ;
-margin: 0px   ;
-padding: 0px   ;
+margin: 0rem   ;
+padding: 0rem   ;
 }
 .home_labels
 {
-    margin: 0px   ;
+    margin: 0rem   ;
 overflow-wrap: break-word   ;
 font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
-font-size: 12px   ;
+font-size: .75rem   ;
 font-weight: 800   ;
 line-height: 1.33333em   ;
 letter-spacing: 0.0833333em   ;
@@ -231,39 +231,39 @@ padding-bottom: 1rem;
 .home_whereIP
 {
     -moz-box-align: center   ;
-    padding-left: 12px   ;
-    padding-right: 12px   ;
+    padding-left: .75rem   ;
+    padding-right: .75rem   ;
     position: relative   ;
     align-items: center   ;
     background-color: rgb(255, 255, 255)   ;
     display: flex   ;
-    height: 48px   ;
+    height: 3rem   ;
     width: 100%   ;
-    border:1px solid sliver;
+    border:0.0625rem solid sliver;
 
-    font-size: 17px   ;
+    font-size: 1.0625‬rem   ;
 background-color: transparent   ;
-margin: 0px   ;
-padding: 0px   ;
+margin: 0rem   ;
+padding: 0rem   ;
 width: 100%   ;
 text-overflow: ellipsis   ;
 }
 
 .home_date
 {
-    font-size: var(--font-form-element-font-size, 17px)   ;
-line-height: var(--font-form-element-line-height, 24px)   ;
+    font-size: var(--font-form-element-font-size, 1.0625rem)   ;
+line-height: var(--font-form-element-line-height, 1.5rem)   ;
 letter-spacing: var(--font-form-element-letter-spacing, normal)   ;
 
 text-transform: var(--font-form-element-text-transform, undefined)   ;
 color: var(--font-form-element-color, #484848)   ;
-padding-top: var(--spacing-form-element-vertical, 11px)   ;
-padding-bottom: var(--spacing-form-element-vertical, 11px)   ;
+padding-top: var(--spacing-form-element-vertical, .6875rem)   ;
+padding-bottom: var(--spacing-form-element-vertical, .6875rem)   ;
 font-weight: var(--font-light-font-weight, normal)   ;
 background-color: var(--color-clear, transparent)   ;
-padding-left: var(--spacing-form-element-horizontal, 0px)   ;
-padding-right: var(--spacing-form-element-horizontal, 11px)   ;
-border:0px none;
+padding-left: var(--spacing-form-element-horizontal, 0rem)   ;
+padding-right: var(--spacing-form-element-horizontal, .6875rem)   ;
+border:0rem none;
 }
 #home_grid
 {
@@ -276,28 +276,28 @@ border:0px none;
     background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%   ;
 position: relative   ;
 text-align: left   ;
-border: 1px solid rgb(235, 235, 235)   ;
-border-radius: 3px   ;
-padding: 8px 11px 11px   ;
-font-size: 16px   ;
+border:0.0625rem solid rgb(235, 235, 235)   ;
+border-radius: 0.1875‬rem   ;
+padding: .5rem 0.6875‬rem 0.6875‬   ;
+font-size: 1rem   ;
 font-weight: 400   ;
 line-height: normal   ;
 display: block   ;
 width: 100%   ;
-height: 48px   ;
+height: 3rem   ;
 color: rgb(118, 118, 118)   ;
 }
 #home_svg
 {
     position: absolute   ;
-right: 11px   ;
-top: 0px   ;
-bottom: 0px   ;
+right: .6875rem   ;
+top: 0rem   ;
+bottom: 0rem   ;
 margin: auto   ;
 pointer-events: none   ;
 display: block   ;
-height: 12px   ;
-width: 12px   ;
+height: .75rem   ;
+width: .75rem   ;
 }
 #home1{
 color:white;
@@ -324,7 +324,7 @@ color:white;
 }
 .home_promo3
 {
-    font-size: 32px;
+    font-size: 2rem;
 font-weight: normal;
 color:white;
 text-align: center;
@@ -338,7 +338,7 @@ text-align: center;
     margin-left:40rem;
     margin-top:1rem;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.43;  
 }
 #home_aboutus{
@@ -360,7 +360,7 @@ text-align: center;
 }
 #home_aboutus_label
 {
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.375;
     font-weight: 600;
     color:white;
@@ -388,7 +388,7 @@ text-align: center;
     color: #363636;
     font-family: "Josefin Sans", sans-serif;
 font-weight: 600;
-line-height: 1.125;
+line-height: 1.125rem;
 text-align: center;
 }
 .room_grid
@@ -403,24 +403,24 @@ text-align: center;
     color: rgb(34, 34, 34)   ;
 font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
 font-weight: 400   ;
-font-size: 18px   ;
-line-height: 24px   ;
-max-height: 24px   ;
+font-size: 1.125rem   ;
+line-height: 1.5rem   ;
+max-height: 1.5rem   ;
 overflow: hidden   ;
 text-overflow: ellipsis   ;
 display: -webkit-box   ;
 -webkit-line-clamp: 1   ;
 -moz-box-orient: vertical   ;
-margin-top:12px;
+margin-top:.75rem;
 }
 .room_des2
 {
     color: rgb(34, 34, 34)   ;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
     font-weight: 400   ;
-    font-size: 18px   ;
-    line-height: 24px   ;
-    max-height: 24px   ;
+    font-size: 1.125rem   ;
+    line-height: 1.5rem  ;
+    max-height: 1.5rem   ;
     overflow: hidden   ;
     text-overflow: ellipsis   ;
     display: -webkit-box   ;
@@ -435,18 +435,18 @@ margin-top:12px;
     display: flex   ;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
     font-weight: 400   ;
-    font-size: 18px   ;
-    line-height: 24px   ;
-    margin-top:12px;
+    font-size: 1.125rem   ;
+    line-height: 1.5rem   ;
+    margin-top:.75rem;
 }
 .room_img_box
 {
     padding: .75rem;
-    border:1px solid grey;
+    border:0.0625‬rem solid grey;
 }
 .room_img_boxinner
 {
-    border-radius: 6px;
+    border-radius: .375rem;
 display: block;
 padding: 1.25rem;
 }
@@ -488,7 +488,7 @@ padding: 1.25rem;
 }
 .signup_label
 {
-    margin: 0px  ;
+    margin: 0rem  ;
     overflow-wrap: break-word   ;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
     font-size: 1rem   ;
@@ -505,12 +505,12 @@ padding: 1.25rem;
     align-items: center   ;
     background-color: rgb(255, 255, 255)   ;
     display: flex   ;
-    height: 30px   ;
-    font-size: 20px   ;
-border: 1px solid sliver;
-border-radius: 5px;
-margin: 0px   ;
-padding: 0px   ;
+    height: 1.875rem   ;
+    font-size: 1.25rem   ;
+border: 0.0625‬rem solid sliver;
+border-radius: .3125rem;
+margin: 0rem  ;
+padding: 0rem   ;
 width: 100%   ;
 text-overflow: ellipsis   ;
 }
@@ -524,10 +524,10 @@ text-overflow: ellipsis   ;
 border-color: transparent;
 color: #fff;
 justify-content: center;
-padding-bottom: calc(.375em - 1px);
+padding-bottom: calc(.375em - .0625rem);
 padding-left: .5em;
 padding-right: .75em;
-padding-top: calc(.375em - 1px);
+padding-top: calc(.375em - .0625rem);
 text-align: center;
 white-space: nowrap;
 font-size:2rem;
@@ -546,7 +546,7 @@ font-size:2rem;
 border-color: transparent;
 color: black;
 justify-content: center;
-padding-bottom: calc(.375em - 1px);
+padding-bottom: calc(.375em - .0625rem);
 padding-left: .5em;
 padding-right: .75em;
 padding-top: 2rem;
@@ -565,8 +565,8 @@ white-space: nowrap;
 #login_form
 {
     background-color: white;
-    border: 1px solid sliver;
-    border-radius: 5px;
+    border: .0625rem solid sliver;
+    border-radius: .3125rem;
 }
 .login_input
 {
@@ -586,7 +586,7 @@ white-space: nowrap;
     border-color: #ff5a5f;
     background-color: #ff5a5f;
     color: #fff;
-    padding:20px 27px 20px 27px;
+    padding:1.25rem 1.6875rem 1.25rem 1.6875rem;
     text-align: center;
     margin:2rem;
     width:30rem;
@@ -594,13 +594,89 @@ white-space: nowrap;
 #login_signup
 {
     display: inline;
-    margin-right: 4px;
-    line-height: 34px;
-    font-size: 16px;
-    padding-left:18rem;
+    margin-right: .25rem;
+    line-height: 2.125rem;
+    font-size: 1rem;
+    padding-left:1.125rem;
 }
 .login_error
 {
     color:red;
     font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+}
+
+/* responsive design */
+
+@media(max-width:768px)
+{
+   /*template*/
+    #nav_grid
+    {
+        display: block;
+        
+    }#box1
+    {
+        height: auto   ;
+    }
+    #box2
+    {
+        height: auto   ;
+    }
+    .box3
+    {
+        height: auto  ;
+    }
+   
+    #head1
+    {
+        display: block;
+    }
+    #footer_grid
+    {
+        display: block;
+    }
+    
+    /*home page*/
+
+    #home_promo2
+    {
+    height: auto;
+    }
+    .home_promo3
+    {
+    font-size: 2rem;
+    width:auto;
+    }
+    #home_invitebox
+    {
+    
+    
+    text-align: center;
+    margin-left:20rem;
+    margin-top:1rem;
+    }
+    #home_aboutus_grid
+    {
+        display: block;
+    }
+    
+    /* room page*/
+    .room_grid
+    {
+        display: block;
+    }
+    #room_h2
+    {
+        line-height: 2rem;
+    }
+
+}
+
+
+@media(max-width:480px)
+{
+    #home_invitebox
+    {
+        margin-left: 10rem;
+    }
 }

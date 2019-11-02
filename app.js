@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-const DBURL= "mongodb+srv://cass:<allen408>@cluster0-a7kxx.mongodb.net/test?retryWrites=true&w=majority";
+
+//mongoose
+const DBURL= "mongodb+srv://cass:allen408@cluster0-a7kxx.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(DBURL, {useNewUrlParser: true,
                     useUnifiedTopology: true})
 
@@ -41,16 +43,7 @@ app.get("/sign", (req, res) => {
 });
 app.post("/sign",(req,res)=>
 {
-    const Schema = mongoose.Schema;
-
-  const taskSchema = new Schema({
-    firstname:  String,
-    lastname: String,
-    email:String,
-    password:String,
-    birthday:Date
-  });
-  const Tasks = mongoose.model('Tasks', taskSchema);
+    const Tasks=require("./task/task");
 
     const formData ={
         firstname:req.body.firstname,
@@ -100,9 +93,9 @@ app.post("/sign",(req,res)=>
       }
       else
       {
-        if(!(/^[a-zA-Z]+[0-9]{6,12}$/.test(req.body.password)))
+        if(!(/^[a-zA-Z0-9]{6,12}$/.test(req.body.password)))
         {
-            error.push("invalid password");
+            error.push("invalid password,password must be at least 6 letters or numbers ");
         }
         if(!(/^[a-zA-Z]{2,20}$/.test(req.body.lastname)))
         {
@@ -121,13 +114,14 @@ app.post("/sign",(req,res)=>
           })
         }
         else 
-        res.redirect("/room");
+        {
+           
         
          // SEND THE EMAIL
          const nodemailer = require('nodemailer');
          const sgTransport = require('nodemailer-sendgrid-transport');
 
-         const keys =require('./keys/key.js');
+         const keys =require('./keys/key');
 
          const options=
           {
@@ -140,7 +134,7 @@ app.post("/sign",(req,res)=>
 
         const email = {
             to: `${req.body.email}`,
-            from: 'admin@airbnb.com',
+            from: 'admin@myzhiwei.com',
             subject: 'confirmation',
             text: `Congratulation! you are one of us!!!!`, 
             html: `Congratulation! you are one of us!!!!`
@@ -152,6 +146,9 @@ app.post("/sign",(req,res)=>
             }
             console.log(res);
         });
+        res.redirect("/room");
+        }
+        
         }
       }
 )

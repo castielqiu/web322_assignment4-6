@@ -1,1 +1,5 @@
-(module.exports = {sendgrid_key:'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'} )
+const keys =
+{
+    sendgrid_key:'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'
+}
+module.exports = keys;
