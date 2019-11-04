@@ -335,7 +335,7 @@ text-align: center;
     width:8rem;
     height: 3rem;
     text-align: center;
-    margin-left:40rem;
+    margin-left:40%;
     margin-top:1rem;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     font-size: .875rem;
@@ -649,10 +649,8 @@ white-space: nowrap;
     }
     #home_invitebox
     {
-    
-    
     text-align: center;
-    margin-left:20rem;
+    
     margin-top:1rem;
     }
     #home_aboutus_grid
@@ -677,6 +675,7 @@ white-space: nowrap;
 {
     #home_invitebox
     {
+        
         margin-left: 10rem;
     }
 }

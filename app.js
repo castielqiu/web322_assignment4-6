@@ -43,6 +43,7 @@ app.get("/sign", (req, res) => {
 });
 app.post("/sign",(req,res)=>
 {
+    /* create object */
     const Tasks=require("./task/task");
 
     const formData ={
@@ -62,6 +63,9 @@ app.post("/sign",(req,res)=>
     .catch((err)=>{
         console.log(`Task was not inserted into the database because ${err}`)
     })
+    
+    /* if empty input then tell user re-enter  */
+
     const error=[];
     if(req.body.lastname=="")
     {
@@ -92,6 +96,9 @@ app.post("/sign",(req,res)=>
           })
       }
       else
+
+      /*password and username validation */
+
       {
         if(!(/^[a-zA-Z0-9]{6,12}$/.test(req.body.password)))
         {
@@ -117,7 +124,7 @@ app.post("/sign",(req,res)=>
         {
            
         
-         // SEND THE EMAIL
+         // send email
          const nodemailer = require('nodemailer');
          const sgTransport = require('nodemailer-sendgrid-transport');
 
@@ -159,7 +166,7 @@ app.get("/login", (req, res) => {
 app.post("/login",(req,res)=>{
 
     const errors =[];
-
+// check empty input
     if(req.body.username=="")
     {
         errors.push("Please enter your username")
@@ -180,6 +187,7 @@ app.post("/login",(req,res)=>{
       }
 
       else
+      // validate password format
       {
             if(/^[a-zA-Z0-9]{6,12}$/.test(req.body.password))
         {
