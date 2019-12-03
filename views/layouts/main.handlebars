@@ -24,8 +24,12 @@
              <li><a href="/room"><div id="box1"><div class="nav">Host a home</div></div></a></li>
               <li><a href="/room"><div id="box2"><div class="nav">Host an experience</div></div></a></li>
                <li><a href="/room"><div class="box3"><div class="nav">Help</div></div></a></li>
-                <li><a href="/sign"><div class="box3"><div class="nav">Sign up</div></div></a></li>
-                 <li><a href="/login"><div class="box3"><div class="nav">Log in</div></div></a></li>
+                 {{#if user}}
+                    <li><a class="box3" href="/user/logout">Logout</a></li>
+                {{else}}
+                    <li><a href="/user/login"><div class="box3"><div class="nav">Log in</div></div></a></li>
+                    <li><a href="/user/sign"><div class="box3"><div class="nav">Sign up</div></div></a></li>
+                {{/if}}
          </ul>
     </nav>
     

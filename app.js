@@ -8,11 +8,36 @@ const bodyParser = require("body-parser");
 
 const mongoose = require('mongoose');
 
+const methodOverride = require('method-override');
+
+const bcrypt = require('bcryptjs');
+
+const session = require('express-session');
+
+const fileupload = require("express-fileupload");
+
+app.engine('.hbs', exphbs({ extname:'.hbs', defaultLayout:'main'}));
+app.set('view engine', '.hbs');
+
+require("dotenv").config({path:'./config/keys.env'});
+
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
+
+app.use(fileupload());
+
+app.use(session({secret:"This key is private"}));
+
+app.use((req,res,next)=>{
+
+    res.locals.user= req.session.userInfo;
+    next();
+})
+
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+app.use(methodOverride('_method'));
 
 //mongoose
 const DBURL= "mongodb+srv://cass:allen408@cluster0-a7kxx.mongodb.net/test?retryWrites=true&w=majority";
@@ -27,181 +52,16 @@ mongoose.connect(DBURL, {useNewUrlParser: true,
     console.log(`not connected : ${err}`);
 })
 
+const userRoutes = require("./routes/user");
+//const taskRoutes = require("./routes/task");
+const generalRoutes = require("./routes/General");
 
-app.get("/", (req, res) => {
+app.use("/",generalRoutes);
 
-    res.render("home")
-});
+app.use("/user",userRoutes);
 
-app.get("/room", (req, res) => {
+//app.use("/task",taskRoutes);
 
-    res.render("room")
-});
-app.get("/sign", (req, res) => {
 
-    res.render("sign")
-});
-app.post("/sign",(req,res)=>
-{
-    /* create object */
-    const Tasks=require("./task/task");
-
-    const formData ={
-        firstname:req.body.firstname,
-        lastname:req.body.lastname,
-        email:req.body.email,
-        password:req.body.password,
-        birthday:req.body.birthday,
-    }
-   
-    const ta = new Tasks(formData);
-    ta.save()
-    .then(() => 
-    {
-        console.log('Task was inserted into database')
-    })
-    .catch((err)=>{
-        console.log(`Task was not inserted into the database because ${err}`)
-    })
-    
-    /* if empty input then tell user re-enter  */
-
-    const error=[];
-    if(req.body.lastname=="")
-    {
-        error.push("Please enter your Lastname")
-    }
-    if(req.body.firstname=="")
-    {
-        error.push("Please enter your Firstname")
-    }
-    if(req.body.email=="")
-    {
-        error.push("Please enter your Email")
-    }
-    if(req.body.password=="")
-    {
-        error.push("Please enter your Password")
-    }
-    if(req.body.birthday=="")
-    {
-        error.push("Please enter your Birthday")
-    }
-    if(error.length > 0)
-      {
-
-          res.render("sign",
-          {
-             message:error
-          })
-      }
-      else
-
-      /*password and username validation */
-
-      {
-        if(!(/^[a-zA-Z0-9]{6,12}$/.test(req.body.password)))
-        {
-            error.push("invalid password,password must be at least 6 letters or numbers ");
-        }
-        if(!(/^[a-zA-Z]{2,20}$/.test(req.body.lastname)))
-        {
-        error.push("invalid Lastname")
-        }
-        if(!(/^[a-zA-Z]{2,20}$/.test(req.body.firstname)))
-        {
-        error.push("invalid Firstname")
-        }
-        if(error.length > 0)
-         {
-
-          res.render("sign",
-          {
-             message:error
-          })
-        }
-        else 
-        {
-           
-        
-         // send email
-         const nodemailer = require('nodemailer');
-         const sgTransport = require('nodemailer-sendgrid-transport');
-
-         const keys =require('./keys/key');
-
-         const options=
-          {
-            auth: {
-                api_key: keys.sendgrid_key
-            }
-        }
-        const text=`Dear ${req.body.firstname}`
-       const mailer = nodemailer.createTransport(sgTransport(options));
-
-        const email = {
-            to: `${req.body.email}`,
-            from: 'admin@myzhiwei.com',
-            subject: 'confirmation',
-            text: `Congratulation! you are one of us!!!!`, 
-            html: `Congratulation! you are one of us!!!!`
-        };
-         
-        mailer.sendMail(email, (err, res)=> {
-            if (err) { 
-                console.log(err) 
-            }
-            console.log(res);
-        });
-        res.redirect("/room");
-        }
-        
-        }
-      }
-)
-app.get("/login", (req, res) => {
-
-    res.render("login")
-});
-app.post("/login",(req,res)=>{
-
-    const errors =[];
-// check empty input
-    if(req.body.username=="")
-    {
-        errors.push("Please enter your username")
-    }
-    
-    if(req.body.password=="")
-    {
-        errors.push("Please enter your password")
-    }
-
-      if(errors.length > 0)
-      {
-
-          res.render("login",
-          {
-             message:errors 
-          })
-      }
-
-      else
-      // validate password format
-      {
-            if(/^[a-zA-Z0-9]{6,12}$/.test(req.body.password))
-        {
-           res.redirect("/room");
-      }
-      else 
-      {
-        res.render("login",
-        {
-           message:["Password must have letters and numbers only"] 
-        })
-      }
-    }
-
-});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);
