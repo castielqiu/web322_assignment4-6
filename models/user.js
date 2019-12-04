@@ -48,6 +48,8 @@ userSchema.pre("save",function(next){
 
 })
 
+
+
 const userModel =mongoose.model("user",userSchema);
 
 module.exports=userModel;

@@ -380,7 +380,8 @@ text-align: center;
 
 #room_main
 {
-    background-color: white;
+    background-color:rgba(0, 0, 0, 0.08);
+   
 }
 #room_h2
 {
@@ -403,7 +404,7 @@ text-align: center;
     color: rgb(34, 34, 34)   ;
 font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
 font-weight: 400   ;
-font-size: 1.125rem   ;
+font-size: 2rem   ;
 line-height: 1.5rem   ;
 max-height: 1.5rem   ;
 overflow: hidden   ;
@@ -412,6 +413,7 @@ display: -webkit-box   ;
 -webkit-line-clamp: 1   ;
 -moz-box-orient: vertical   ;
 margin-top:.75rem;
+margin-bottom: 1rem;
 }
 .room_des2
 {
@@ -426,6 +428,7 @@ margin-top:.75rem;
     display: -webkit-box   ;
     -webkit-line-clamp: 1   ;
     -moz-box-orient: vertical   ;
+    margin-bottom: .5rem;
 }
 .room_des3
 {
@@ -448,7 +451,7 @@ margin-top:.75rem;
 {
     border-radius: .375rem;
 display: block;
-padding: 1.25rem;
+padding: 1rem;
 }
 
 .room_img
@@ -616,6 +619,15 @@ white-space: nowrap;
     padding-bottom: 3rem;
     padding-left:3rem;
 }
+
+/*create a room page*/
+.add_form
+{
+    padding-left:3rem;
+}
+
+
+
 
 /* responsive design */
 

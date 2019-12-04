@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const bcrypt= require("bcryptjs");
 const path = require("path");
-const Tasks=require("../models/user");
 const user = require("../models/user");
+const room= require("../models/room")
 const exphbs = require("express-handlebars");
 const hasAccess = require("../middleware/auth");
 const hasAccessAdmin = require("../middleware/admin");
@@ -20,7 +20,6 @@ router.get("/sign", (req, res) => {
 
     res.render("sign")
 });
-
 
 router.post("/sign",(req,res)=>
 {
@@ -223,6 +222,89 @@ router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/")
 });
+/* Create a room*/
+router.get("/add", hasAccessAdmin,(req, res) => {
+
+    res.render("add");
+});
+router.post("/add",hasAccessAdmin,(req,res)=>
+{
+    /* create object */
+   
+
+    const formData ={
+        title:req.body.title,
+        price:req.body.price,
+        description:req.body.description,
+        location:req.body.location,
+    }
+   
+ /* if empty input then tell user re-enter  */
+    const error=[];
+
+    
+    if(req.body.title=="")
+    {
+        error.push("Please enter your title")
+    }
+    if(req.body.price=="")
+    {
+        error.push("Please enter Product price")
+    }
+    if(req.body.location=="")
+    {
+        error.push("Please enter location")
+    }
+    if(req.body.description=="")
+    {
+        error.push("Please enter Product description")
+    }
+
+    if(req.files==null)
+    {
+        error.push("Sorry you must upload a file")
+    }
+    else
+    {
+        if(req.files.profilePic.mimetype.indexOf("image")==-1)
+            {
+                error.push("Sorry you can only upload images : Example (jpg,gif, png) ")
+            }
+    }
+    if(error.length > 0)
+    {
+        res.render("User/add",{
+            error:error,
+            title :formData.title,
+            description : formData.description,
+            price:formData.price,
+             location: formData.location
+        })
+    }
+    else
+    {
+        const ta = new room(formData);
+        ta.save()
+        .then(ta=>{
+            req.files.profilePic.name = `db_${ta._id}${path.parse(req.files.profilePic.name).ext}`
+            req.files.profilePic.mv(`public/uploads/${req.files.profilePic.name}`)
+            .then(()=>{
+                room.findByIdAndUpdate(ta._id,{
+                    profilePic:req.files.profilePic.name 
+                })
+                .then(()=>{
+                    console.log(`File name was updated in the database`)
+                    res.redirect("/room");  
+                })
+                .catch(err=>console.log(`Error :${err}`));     
+            });
+        }) 
+        .catch(err=>console.log(`Error :${err}`));
+    }
+    }
+)
+
+
 
 module.exports=router;
 
