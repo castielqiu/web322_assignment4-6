@@ -1,0 +1,21 @@
+  <form method="POST" action="/user/edit/{{taskDocument._id}}/?_method=PUT" enctype="multipart/form-data">
+
+        <label>Title</label>
+        <input type="text" name="title" id="title" value="{{taskDocument.title}}"> <br><br>
+        <label>location</label>
+        <select name=location >
+                <option value="Montreal">Montreal</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="Calgary">Calgary</option>
+                <option value="Toronto">Toronto</option>
+            </select> <br><br>
+
+        <label>Price</label>
+        <input type="number" name="price" id="price" value="{{taskDocument.price}}"> <br><br>
+
+        <label>Description</label>
+        <input type="text" id="description" name="description" value="{{taskDocument.description}}"><br><br>
+
+        <input type="file" name="profilePic" >
+       
+        <input type="submit" value="Update Room">

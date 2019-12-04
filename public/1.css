@@ -380,7 +380,7 @@ text-align: center;
 
 #room_main
 {
-    background-color:rgba(0, 0, 0, 0.08);
+    background-color:transparent;
    
 }
 #room_h2
@@ -441,17 +441,35 @@ margin-bottom: 1rem;
     font-size: 1.125rem   ;
     line-height: 1.5rem   ;
     margin-top:.75rem;
+    margin-bottom: 1rem;
+}
+.room_edit
+{
+    text-decoration: none;
+    color:blue;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+    font-weight: 400   ;
+}
+.room_back
+{
+    float:right;
+    text-decoration: none;
+    color:grey;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif   ;
+    font-weight: 400   ;
 }
 .room_img_box
 {
     padding: .75rem;
     border:0.0625‬rem solid grey;
+    background-color: white;
 }
 .room_img_boxinner
 {
     border-radius: .375rem;
 display: block;
 padding: 1rem;
+background-color: rgba(0, 0, 0, .1);
 }
 
 .room_img

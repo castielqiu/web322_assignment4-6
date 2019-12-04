@@ -41,13 +41,11 @@ userSchema.pre("save",function(next){
             bcrypt.hash(this.password,salt)
             .then(hash=>{
                 this.password=hash;
-                //this.save(); 
                 next();
             })
         })
 
 })
-
 
 
 const userModel =mongoose.model("user",userSchema);
