@@ -6,13 +6,16 @@ router.get("/", (req, res) => {
     res.render("home")
 });
 router.get("/room", (req, res) => {
-   
-    room.find()
-    .then((rooms)=>{
-        console.log(rooms);
+   const query = {};
+   if (req.query.location) {
+       query.location = req.query.location;
+   }
+    room.find(query)
+    .then((room)=>{
+        console.log(room);
         res.render("room",
         {
-            lists:rooms
+            lists:room
         });
     })
     .catch(err=>console.log(`Error : ${err}`));

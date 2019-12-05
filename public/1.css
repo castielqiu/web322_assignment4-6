@@ -216,6 +216,12 @@ color: rgb(72, 72, 72)   ;
 margin: 0rem   ;
 padding: 0rem   ;
 }
+.home3{
+    color:inherit;
+}
+.home3:hover{
+    text-decoration: none;
+}
 .home_labels
 {
     margin: 0rem   ;
@@ -286,6 +292,24 @@ display: block   ;
 width: 100%   ;
 height: 3rem   ;
 color: rgb(118, 118, 118)   ;
+}
+.home_search
+{
+    font-size: var(--font-form-element-font-size, 1.0625rem)   ;
+line-height: var(--font-form-element-line-height, 1.5rem)   ;
+letter-spacing: var(--font-form-element-letter-spacing, normal)   ;
+
+text-transform: var(--font-form-element-text-transform, undefined)   ;
+color: var(--font-form-element-color, #484848)   ;
+padding-top: var(--spacing-form-element-vertical, .6875rem)   ;
+padding-bottom: var(--spacing-form-element-vertical, .6875rem)   ;
+font-weight: var(--font-light-font-weight, normal)   ;
+background-color: var(--color-clear, transparent)   ;
+padding-left: var(--spacing-form-element-horizontal, 0rem)   ;
+padding-right: var(--spacing-form-element-horizontal, .6875rem)   ;
+border:0rem none;
+float:right;
+opacity: .8;
 }
 #home_svg
 {

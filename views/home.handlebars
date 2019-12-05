@@ -3,16 +3,16 @@
     <div id="home1">
     <div class="home2">
         <h1>
-            Book unique places to 
-            <br><a href="https://www.airbnb.ca/sitemaps/v2" style="color:inherit">stay</a>
+            Book unique places  
+            <br><a href="https://www.airbnb.ca/sitemaps/v2" class="home3">to stay</a><br>
              and things to do.
         </h1>
     </div>
-    <form method="POST">
+    <form method="GET" action="/room">
         <div class="home_labels">
             WHERE 
         </div>
-            <select class="home_whereIP">
+            <select class="home_whereIP" name="location">
                 <option >Please select a location</option>
                 <option value="Montreal">Montreal</option>
                 <option value="Vancouver">Vancouver</option>
@@ -41,6 +41,7 @@
             GUESTS
         </div>
               <input  class="home_whereIP" type="number" name=number placeholder="How many Guests?" min="0" >
+              <input type="submit" name="search" value="Click to Search" class="home_search">
     </form>
      </div>
     </div>  

@@ -248,8 +248,9 @@ router.post("/add", hasAccessAdmin, (req, res) => {
             error.push("Sorry you can only upload images : Example (jpg,gif, png) ")
         }
     }
-    if (error.length > 0) {
-        res.render("User/add", {
+    if (error.length > 0) 
+    {
+        res.render("add", {
             error: error,
             title: formData.title,
             description: formData.description,
@@ -299,6 +300,26 @@ router.get("/edit/:id", hasAccessAdmin,(req, res) => {
 /*update edited information */
 
 router.put("/edit/:id", hasAccessAdmin,(req, res) => {
+    const error = [];
+    if (req.files == null) 
+    {
+        error.push("Sorry you must upload a file")
+    }
+    else 
+    {
+        if (req.files.profilePic.mimetype.indexOf("image") == -1) {
+            error.push("Sorry you can only upload images : Example (jpg,gif, png) ")
+        }
+    }
+        if (error.length > 0) 
+        {
+
+            res.render("edit", {
+                message: error
+            })
+        }
+
+    else{
     room.findById(req.params.id)
         .then((task) => {
 
@@ -306,7 +327,7 @@ router.put("/edit/:id", hasAccessAdmin,(req, res) => {
             task.description = req.body.description;
             task.price = req.body.price;
             task.location = req.body.location;
-
+           
             task.save()
                 .then(task => {
                     req.files.profilePic.name = `db_${task._id}${path.parse(req.files.profilePic.name).ext}`
@@ -325,6 +346,7 @@ router.put("/edit/:id", hasAccessAdmin,(req, res) => {
 
                 });
         });
+    }
     });
     
     

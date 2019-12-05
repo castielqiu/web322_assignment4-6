@@ -19,3 +19,9 @@
         <input type="file" name="profilePic" >
        
         <input type="submit" value="Update Room">
+
+         <div class="login_error">
+            {{#each message}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
