@@ -668,6 +668,11 @@ white-space: nowrap;
 {
     padding-left:3rem;
 }
+.add_error
+{
+    padding-left:3rem;
+    color:red;
+}
 
 /*booking*/
 .user_title

@@ -205,16 +205,16 @@ router.post("/add", hasAccessAdmin, (req, res) => {
 
 
     if (req.body.title == "") {
-        error.push("Please enter your title")
+        error.push("Please enter Room title")
     }
     if (req.body.price == "") {
-        error.push("Please enter Product price")
+        error.push("Please enter Room price")
     }
-    if (req.body.location == "") {
+    if (req.body.location == "Anywhere") {
         error.push("Please enter location")
     }
     if (req.body.description == "") {
-        error.push("Please enter Product description")
+        error.push("Please enter Room description")
     }
 
     if (req.files == null) {
