@@ -53,15 +53,12 @@ mongoose.connect(DBURL, {useNewUrlParser: true,
 })
 
 const userRoutes = require("./routes/user");
-//const taskRoutes = require("./routes/task");
-const generalRoutes = require("./routes/General");
+
+const generalRoutes = require("./routes/general");
 
 app.use("/",generalRoutes);
 
 app.use("/user",userRoutes);
-
-//-app.use("/task",taskRoutes);
-
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);

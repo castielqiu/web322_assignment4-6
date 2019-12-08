@@ -87,6 +87,8 @@ router.post("/sign", (req, res) => {
                 })
         }
         else {
+
+            //if no error then save to database
             const ta = new user(formData);
             ta.save()
                 .then(() => {
@@ -129,9 +131,11 @@ router.post("/login", (req, res) => {
             user.findOne({ email: req.body.email })
                 .then(user => {
                     console.log(user);
+                    //hash password, compare the confirm password to first input password
                     bcrypt.compare(req.body.password, user.password)
                         .then(isMatched => {
                             if (isMatched == true) {
+                                //create session
                                 req.session.userInfo = user;
                                 if (user._doc.admin) {
                                     res.redirect("/user/admin");
