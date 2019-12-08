@@ -1,10 +1,10 @@
 <div class="home_promo3">Welcome</div>
 <div class="admin_user">Hi! {{user.firstname}} {{user.lastname}}</div>
 
-<div><a class="admin_user" href="/room">Room list</a></div>
-
-<div class="room_grid">Booked Rooms
-{{#each lists}}
+<div ><a  href="/room" class="user_title">Click here to check the room list</a></div>
+<div class="user_booked">Booked Rooms</div>
+<div class="room_grid">
+{{#each books}}
     <div class="room_img_box">
             <div class="room_img_boxinner">
                 <img class="room_img" src="/uploads/{{this.profilePic}}" alt="Rooms">
@@ -12,6 +12,7 @@
                 <div class="room_des2">{{ this.description}}</div>
                 <div class="room_des2">{{ this.location}}</div>
                 <div class="room_des3"><span class="room_price">$ {{this.price}}</span>/night</div>
+            </div>
+            </div>
   {{/each}}
-  </div>
   </div>

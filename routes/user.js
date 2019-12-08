@@ -42,19 +42,19 @@ router.post("/sign", (req, res) => {
         errors.push("Please enter your password")
     }
     if (req.body.lastname == "") {
-        error.push("Please enter your Lastname")
+        errors.push("Please enter your Lastname")
     }
     if (req.body.firstname == "") {
-        error.push("Please enter your Firstname")
+        errors.push("Please enter your Firstname")
     }
     if (req.body.email == "") {
-        error.push("Please enter your Email")
+        errors.push("Please enter your Email")
     }
     if (req.body.password == "") {
-        error.push("Please enter your Password")
+        errors.push("Please enter your Password")
     }
     if (req.body.birthday == "") {
-        error.push("Please enter your Birthday")
+        errors.push("Please enter your Birthday")
     }
     if (errors.length > 0) {
 
@@ -91,36 +91,6 @@ router.post("/sign", (req, res) => {
             ta.save()
                 .then(() => {
                     console.log('Task was inserted into database');
-                    // send email
-                    /* 
-                     the sendgrid keep making my account under view so i not using this confirmation email
-                    const nodemailer = require('nodemailer');
-                     const sgTransport = require('nodemailer-sendgrid-transport');
-                     
-                     const options=
-                      {
-                        auth: {
-                            api_key: process.env.sendgrid_key
-                        }
-                    }
-                    const text=`Dear ${req.body.firstname}`
-                    const mailer = nodemailer.createTransport(sgTransport(options));
-             
-                     const email = {
-                         to: `${req.body.email}`,
-                         from: 'admin@myzhiwei.com',
-                         subject: 'confirmation',
-                         text: `Congratulation! you are one of us!!!!`, 
-                         html: `Congratulation! you are one of us!!!!`
-                     };
-                      
-                     mailer.sendMail(email, (err, res)=> {
-                         if (err) { 
-                             console.log(err) 
-                         }
-                         console.log(res);
-                     });
-                     */
                     res.redirect("login");
 
                 })
@@ -200,13 +170,11 @@ router.post("/login", (req, res) => {
 router.get("/admin", hasAccessAdmin, (req, res) => {
     res.render("admin");
 });
-router.get("/user/book", hasAccess, (req, res) => {
-    book.find({userid: req.session.userInfo._id})
-    .then(books => res.render("user/book", {books})) 
-});
+
 router.get("/user",hasAccess, (req, res)=>
 {
-    res.render("user");
+    book.find({userid: req.session.userInfo._id})
+    .then(books => res.render("user", {books}))
 })
 router.get("/logout", (req, res) => {
     req.session.destroy();

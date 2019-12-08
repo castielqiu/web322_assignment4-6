@@ -660,6 +660,7 @@ white-space: nowrap;
     font-size: 1.125rem   ;
     padding-bottom: 3rem;
     padding-left:3rem;
+    color:white;
 }
 
 /*create a room page*/
@@ -668,8 +669,21 @@ white-space: nowrap;
     padding-left:3rem;
 }
 
-
-
+/*booking*/
+.user_title
+{
+    text-decoration: none;
+    color:gold;
+    padding-left: 3rem;
+    font-size:1rem;
+}
+.user_booked
+{
+    color:white;
+    padding:2rem 0 1rem 2rem;
+    font-size:2rem;
+    text-align: center;
+}
 
 /* responsive design */
 
