@@ -484,7 +484,7 @@ margin-bottom: 1rem;
 }
 .room_img_box
 {
-    padding: .75rem;
+    margin: .5rem;
     border:0.0625‬rem solid grey;
     background-color: white;
 }
@@ -493,7 +493,7 @@ margin-bottom: 1rem;
     border-radius: .375rem;
 display: block;
 padding: 1rem;
-background-color: rgba(0, 0, 0, .1);
+background-color: rgba(0, 0, 0, .01);
 }
 
 .room_img

@@ -4,7 +4,8 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const path = require("path");
 const user = require("../models/user");
-const room = require("../models/room")
+const room = require("../models/room");
+const book=require("../models/book");
 const exphbs = require("express-handlebars");
 const hasAccess = require("../middleware/auth");
 const hasAccessAdmin = require("../middleware/admin");
@@ -199,10 +200,14 @@ router.post("/login", (req, res) => {
 router.get("/admin", hasAccessAdmin, (req, res) => {
     res.render("admin");
 });
-router.get("/user", hasAccess, (req, res) => {
-    res.render("user");
+router.get("/user/book", hasAccess, (req, res) => {
+    book.find({userid: req.session.userInfo._id})
+    .then(books => res.render("user/book", {books})) 
 });
-
+router.get("/user",hasAccess, (req, res)=>
+{
+    res.render("user");
+})
 router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/")
@@ -349,6 +354,27 @@ router.put("/edit/:id", hasAccessAdmin,(req, res) => {
     }
     });
     
-    
+    /*booking */
+    router.get("/booking/:id", hasAccess, (req, res) =>{
+        room.findById(req.params.id)
+        .then(task=> {
+            const booking = {
+                roomid: task._id,
+                userid: req.session.userInfo._id,
+                title: task.title,
+                location: task.location,
+                description:task.description,
+                price: task.price,
+                profilePic: task.profilePic
+            }
+            const booked = new book(booking)
+            booked.save()
+            .then(() => res.redirect("/user/user"))
+            console.log(`success!`)
+        })
+        .catch((error) => {
+            res.redirect("/room")
+            console.log(`error.`)})
+    });
     
     module.exports = router;

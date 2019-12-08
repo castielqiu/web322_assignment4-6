@@ -18,7 +18,8 @@ router.get("/room", (req, res) => {
             lists:room
         });
     })
+
     .catch(err=>console.log(`Error : ${err}`));
-    
+
 });
 module.exports=router;

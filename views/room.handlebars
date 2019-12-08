@@ -5,27 +5,25 @@
         {{#each lists}}
 
         <div class="room_img_box">
-            <div class="room_img_boxinner">
-                <div class="room_img_boxinner">
-                    <img class="room_img" src="/uploads/{{this.profilePic}}" alt="Rooms">
-                    <div class="room_des1">{{ this.title }}</div>
-                    <div class="room_des2">{{ this.description}}</div>
-                    <div class="room_des2">{{ this.location}}</div>
-                    <div class="room_des3"><span class="room_price">$ {{this.price}}</span>/night</div>
-                    {{#if ../user}}
-                    
-                    {{#if ../user.admin}}
-                    <ul><a  class="room_edit" href="/user/edit/{{this._id}}">Edit</a></ul>
-                    <ul><a  class="room_back" href="/user/admin">Back to Administrator Page</a></ul>
-                    {{else}}
-                    <ul><a class="box3" href="/">Book a Room</a></ul>
-                    {{/if}}
-                {{else}}
-                    <div><a class="room_edit" href="/user/login">Please log in</a></div>
-                {{/if}}
-                </div>
-            </div>
 
+            <div class="room_img_boxinner">
+                <img class="room_img" src="/uploads/{{this.profilePic}}" alt="Rooms">
+                <div class="room_des1">{{ this.title }}</div>
+                <div class="room_des2">{{ this.description}}</div>
+                <div class="room_des2">{{ this.location}}</div>
+                <div class="room_des3"><span class="room_price">$ {{this.price}}</span>/night</div>
+                {{#if ../user}}
+
+                {{#if ../user.admin}}
+                <ul><a class="room_edit" href="/user/edit/{{this._id}}">Edit</a></ul>
+                <ul><a class="room_back" href="/user/admin">Back to Administrator Page</a></ul>
+                {{else}}
+                <ul><form method="GET" action="/user/booking/{{this._id}}"><input type="submit" value="Book a room"></form></ul>
+                {{/if}}
+                {{else}}
+                <div><a class="room_edit" href="/user/login">Please log in</a></div>
+                {{/if}}
+            </div>
         </div>
         {{/each}}
     </div>
